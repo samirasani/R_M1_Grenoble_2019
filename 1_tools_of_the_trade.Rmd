@@ -11,66 +11,17 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Lecture 0: getting started
-
-## The course
-
-This course will be a *12 hour* brief introduction to R, from the point of view of the *tidyverse*, a set of packages developed by Hadley Wickham.
-
-We will be dealing with the basics of data handling:
-
-- data input & output 
-- data wrangling, selecting; filtering, mutating (with *dplyr*)
-- data reshaping and merging (with *tidyr*)
-- data plotting (with *ggplot*)
-- some web crawling & scraping
-- practical exercises
-
-Slides will be in English for a simple reason: **all** R documentation is in English. Out there you will be needing help, and it is good to be taught in the language you're going to get helped with. 
-
-## Lecture plan: week 1
-
-- **Lecture 0**: (tue 10th) setup, tools, workflow
-- **Lecture 1**: (wed 11th) basic plotting
-- **Lecture 2**: (thu 12th) data IO & basic data wrangiling
-- **Lecture 3**: (fri 13th) advanced data wrangling
-
-## Lecture plan: week 2
-
-- **Lecture 4**: (tue 17th) tidy statistical analysis
-- **Lecture 5**: (wed 11th) advanced plotting
-- **Lecture 6**: (thu 12th) crawling data
-
-## Assignment: week 4
-
-In **Lecture 7** (tue oct 3rd) each of you will present a **statistical report** on a topic of choice (list provided at the end of L6). 
-
-This report will be
-
-- done within an .Rmd file
-- hosted on your gitHub page, on your repository
-- a mixture of text, code, results and plots
-
-Example: https://jtanwk.github.io/us-solar/#how_have_solar_panel_costs_changed 
-
-
-## Contacts
-
-*Paolo Crosetto*
-
-- [paolo.crosetto@gmail.com](mailto:paolo.crosetto@gmail.com)
-- Office 413, 4th floor, BATEG
-- do not hesitate to pop by or send an email if needed
-
-
-
+# Tools used in the course
 
 ## Tools of the trade
 
 - the course is (loosely) based on the *R for Data Science* book. Free reading and code [here](http://r4ds.had.co.nz/)
-- we will use the (free and wonderful) editor [Rstudio](www.rstudio.com)
-- within Rstudio, we will use the (free and even more wonderful) packages from the [tidyverse](https://www.tidyverse.org/)
-- we will use freely downloadable data from several sources
+- R editor: [Rstudio (free)](www.rstudio.com)
+- Packages: [tidyverse (free)](https://www.tidyverse.org/)
+- Hosting and version control: [gitHub (free)](https://github.com/)
+- Data: freely available data + eurostat + US data + web crawling (all free)
+
+# R
 
 ## Your R background
 
@@ -102,7 +53,7 @@ Example: https://jtanwk.github.io/us-solar/#how_have_solar_panel_costs_changed
 - Reinhardt & Rogoff [see here for more](https://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt#Methodological_flaws)
 - You can run macros, but then it gets awkward anyway
 
-## Reproducible work
+## Reproducible work: why
 
 > *Whenever you do serius analysis, consider this*
 
@@ -113,7 +64,7 @@ Example: https://jtanwk.github.io/us-solar/#how_have_solar_panel_costs_changed
 - think how hard it can then be for *other people* to read your work
 - **take care of your future self: do reproducible work**
 
-## Reproducible work
+## Reproducible work: how
 
 - *You need to keep track of what you do. So:*
 
@@ -122,20 +73,58 @@ Example: https://jtanwk.github.io/us-solar/#how_have_solar_panel_costs_changed
 - comment extensively
 - or, if too lazy, use a code that is *readable*
 
+# Rstudio
 
-## Further resources 
+## Rstudio tour
 
-> *Where to find more about R, the tidyverse, get help, etc...*
+# gitHub
 
-- The [tidyverse website](https://www.tidyverse.org/) contains all the package documentation and galleries of examples
-- The [R for Data Science](http://r4ds.had.co.nz/) book covers all of the course and more
-- There is a nice cheatsheet about ggplot [here](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
-- Another nice cheatsheet about data wrangling [here](https://www.rstudio.org/links/data_transformation_cheat_sheet)
+## Reproducible work: online repository
 
-## If you are lost and need to answer a question...
+## gitHub tour
 
-- try to input `?` or `??` followed by the command/topic of interest in R
-- try StackExchange: there is an R channel [here](https://stackoverflow.com/questions/tagged/r)
-- (learn how to ask meaningful questions first, though...)
+
+
+# Online resources
+
+
+## Cheat sheets
+
+> you might want to have a list of functions at hand for your exercises
+
+- Base R cheat sheet: [here](http://github.com/rstudio/cheatsheets/raw/master/source/pdfs/base-r.pdf)
+- Rstudio cheat sheet: [here](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/rstudio-IDE-cheatsheet.pdf)
+- data manipulation cheat sheet: [here](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
+- ggplot2 cheat sheet: [here](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/ggplot2-cheatsheet-2.1.pdf)
+- Eurostat cheat sheet: [here](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/eurostat_cheatsheet.pdf)
+- Regular Expressions: [here](https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf)
+
+
+
+## Books and other online resources
+
+
+- [Tidyverse website](https://www.tidyverse.org/) contains all the package documentation and galleries of examples
+
+- [R for Data Science](http://r4ds.had.co.nz/) book covers all of the course and more
+
+- [Happy git with R](https://happygitwithr.com/) for a git and Rstudio guide
+
+
+
+## Getting info
+
+- **inline help**
+  - `?command`: returns command documentation
+  - `??topic`: returns search results for the topic
+  
+- **vignettes**
+  - HTML tutorials, with code and results
+  
+- **StackExchange** [here](https://stackoverflow.com/questions/tagged/r)
+  - code Q&A website. Not R-only. 
+  - use sensible keywords
+  - learn how to ask a question
+
 
 
