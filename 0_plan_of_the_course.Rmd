@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## The course
 
-This course will be a *12 hour* brief introduction to R, from the point of view of the *tidyverse*, a set of packages developed by Hadley Wickham.
+This course will be a *24 hour* brief introduction to R, from the point of view of the *tidyverse*, a set of packages developed by Hadley Wickham.
 
 We will be dealing with the basics of data handling:
 
@@ -23,10 +23,10 @@ We will be dealing with the basics of data handling:
 - data wrangling, selecting; filtering, mutating (with *dplyr*)
 - data reshaping and merging (with *tidyr*)
 - data plotting (with *ggplot*)
-- some web crawling & scraping
-- practical exercises
+- tidy data analysis
+- web crawling & scraping (with *rvest* and *RCrawler*)
 
-Slides will be in English for a simple reason: **all** R documentation is in English. Out there you will be needing help, and it is good to be taught in the language you're going to get helped with. 
+Slides will be in English. **All** R documentation is in English. Out there you will be needing help, and it is good to be taught in the language you're going to get helped with. 
 
 ## Lecture plan: week 1
 
@@ -61,81 +61,4 @@ Example: https://jtanwk.github.io/us-solar/#how_have_solar_panel_costs_changed
 - [paolo.crosetto@gmail.com](mailto:paolo.crosetto@gmail.com)
 - Office 413, 4th floor, BATEG
 - do not hesitate to pop by or send an email if needed
-
-
-
-
-## Tools of the trade
-
-- the course is (loosely) based on the *R for Data Science* book. Free reading and code [here](http://r4ds.had.co.nz/)
-- we will use the (free and wonderful) editor [Rstudio](www.rstudio.com)
-- within Rstudio, we will use the (free and even more wonderful) packages from the [tidyverse](https://www.tidyverse.org/)
-- we will use freely downloadable data from several sources
-
-## Your R background
-
-> *How many of you have already used*
-
-- Excel
-- SAS, SPSS
-- Stata
-- Base R
-- Tidyverse R
-- Python, Jupyter, Julia, C, C++...
-
-## Why R?
-
-> *Why bother with R, of all tools?*
-
-- it's free (as in *free beer* and also as in *free speech*)
-- it has a *huge* code base and an *ever increasing* user base
-- it is a programming language *built for doing statistics*
-- it forces you to *understand what you are doing* (hard at first, but...)
-- it forces you to use *scripts* -> reproducible research
-- and if all of this does not convince you, *it is always better than Excel*
-
-## Why not Excel? [a short rant]
-
-> *Excel is really bad for serious work*
-
-- It has a click-based interface that is a source of horrible errors
-- Reinhardt & Rogoff [see here for more](https://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt#Methodological_flaws)
-- You can run macros, but then it gets awkward anyway
-
-## Reproducible work
-
-> *Whenever you do serius analysis, consider this*
-
-- in any analysis, even the basics, you make *hundreds* of operations on your data
-- each of them can be a mistake, can contain one, can be forgotten, or done twice
-- if you get back to the data after 1 month, will you remember the choices made? 
-- **NO**
-- think how hard it can then be for *other people* to read your work
-- **take care of your future self: do reproducible work**
-
-## Reproducible work
-
-- *You need to keep track of what you do. So:*
-
-- always use a script-based language
-- experiment interactively, try and re-try, but then lock what you did in a *script*
-- comment extensively
-- or, if too lazy, use a code that is *readable*
-
-
-## Further resources 
-
-> *Where to find more about R, the tidyverse, get help, etc...*
-
-- The [tidyverse website](https://www.tidyverse.org/) contains all the package documentation and galleries of examples
-- The [R for Data Science](http://r4ds.had.co.nz/) book covers all of the course and more
-- There is a nice cheatsheet about ggplot [here](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
-- Another nice cheatsheet about data wrangling [here](https://www.rstudio.org/links/data_transformation_cheat_sheet)
-
-## If you are lost and need to answer a question...
-
-- try to input `?` or `??` followed by the command/topic of interest in R
-- try StackExchange: there is an R channel [here](https://stackoverflow.com/questions/tagged/r)
-- (learn how to ask meaningful questions first, though...)
-
 
