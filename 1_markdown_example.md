@@ -1,3 +1,9 @@
+---
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
 
 # Header 1
 ## Header 2

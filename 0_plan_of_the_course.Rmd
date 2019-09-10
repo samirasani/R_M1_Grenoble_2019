@@ -2,9 +2,11 @@
 title: "Introduction to R and the tidyverse"
 author: "Paolo Crosetto"
 output:
+  slidy_presentation:
+    incremental: no
   ioslides_presentation: default
   beamer_presentation:
-    incremental: false
+    incremental: no
 ---
 
 ```{r setup, include=FALSE}
