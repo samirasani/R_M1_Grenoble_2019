@@ -77,9 +77,51 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Rstudio tour
 
+- panes
+- resources
+- console
+- history
+- plots
+- packages
+- help
+
+# Rmarkdown
+
+## Markdown
+
+> a simple markup language to generate simple text file with minimal syntax
+
+- renders to HTML by default
+- (but also to PDF or to different types of slides)
+- (and to word)
+- minimal syntax
+- cheat sheet (Rstudio -> Help -> Cheatsheets -> R Markdown reference guide)
+
+
+## Rmarkdown
+
+> allows to insert R code into markdown documents
+
+- code 'blends' into text files
+- code is **executed** each time the document is compiled
+- requires package `knitr` + dependencies
+- **these slides** are written in Rmarkdown
+
+## Rmarkdown: tutorial
+
+- Rstudio -> file -> new -> R markdown...
+- 
+
 # gitHub
 
 ## Reproducible work: online repository
+
+- like word comments but for coders
+- like dropbox but for coders
+- keeping track of all code changes
+- allowing cooperation
+- forcing clarity
+- (possiblity to) host results and papers
 
 ## gitHub tour
 
@@ -125,6 +167,66 @@ knitr::opts_chunk$set(echo = FALSE)
   - code Q&A website. Not R-only. 
   - use sensible keywords
   - learn how to ask a question
+
+# Exercises
+
+## Rstudio exercise
+
+1. investigate what does the function `summary` does
+
+2. look up the package info for the package `babynames`
+
+3. not found? install the package `babynames`
+
+4. try to `summary` `babynames`
+
+5. import the babynames dataset to your environment
+
+6. explore the objects in your environment
+
+7 `View()` filter, arrange, reorder the dataset visually
+
+
+## gitHub workflow
+
+1. Create a project on gitHub and link it in Rstudio
+
+2. Edit the readme.md, commit changes
+
+3. Push -- check on gitHub the result
+
+4. Create a new R script - save it on your project directory
+
+5. make R compute the square root of a random number between 0 and 100
+
+6. commit and push -- check on gitHub the result
+
+7. change the R script to compute two such numbers
+
+8. commit and push -- check on gitHub the result
+
+9. Explore gitHub to see what it offers
+
+## Rmarkdown exercise
+
+1. Open your R project in Rstudio
+
+2. Pull from gitHub to be sure you are up to date
+
+3. Create a new Rmarkdown HTML document
+
+4. knit
+
+5. commit & push -- check on gitHub the result
+
+6. modify the **markdown** part of the .Rmd
+
+7. commit (do *not* push)
+
+8. modify at least one chunk of R code. What is the R code doing?
+
+9. knit, check result. Commit & push.
+
 
 
 

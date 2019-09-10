@@ -3203,9 +3203,64 @@ slide:not(.current) .plotly.html-widget{
 
 </article></slide><slide class=""><hgroup><h2>Rstudio tour</h2></hgroup><article  id="rstudio-tour">
 
+<ul>
+<li>panes</li>
+<li>resources</li>
+<li>console</li>
+<li>history</li>
+<li>plots</li>
+<li>packages</li>
+<li>help</li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Rmarkdown</h2></hgroup><article  id="rmarkdown">
+
+</article></slide><slide class=""><hgroup><h2>Markdown</h2></hgroup><article  id="markdown">
+
+<blockquote>
+<p>a simple markup language to generate simple text file with minimal syntax</p>
+</blockquote>
+
+<ul>
+<li>renders to HTML by default</li>
+<li>(but also to PDF or to different types of slides)</li>
+<li>(and to word)</li>
+<li>minimal syntax</li>
+<li>cheat sheet (Rstudio -&gt; Help -&gt; Cheatsheets -&gt; R Markdown reference guide)</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Rmarkdown</h2></hgroup><article  id="rmarkdown-1">
+
+<blockquote>
+<p>allows to insert R code into markdown documents</p>
+</blockquote>
+
+<ul>
+<li>code &lsquo;blends&rsquo; into text files</li>
+<li>code is <strong>executed</strong> each time the document is compiled</li>
+<li>requires package <code>knitr</code> + dependencies</li>
+<li><strong>these slides</strong> are written in Rmarkdown</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Rmarkdown: tutorial</h2></hgroup><article  id="rmarkdown-tutorial">
+
+<ul>
+<li>Rstudio -&gt; file -&gt; new -&gt; R markdown…</li>
+<li></li>
+</ul>
+
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>gitHub</h2></hgroup><article  id="github">
 
 </article></slide><slide class=""><hgroup><h2>Reproducible work: online repository</h2></hgroup><article  id="reproducible-work-online-repository">
+
+<ul>
+<li>like word comments but for coders</li>
+<li>like dropbox but for coders</li>
+<li>keeping track of all code changes</li>
+<li>allowing cooperation</li>
+<li>forcing clarity</li>
+<li>(possiblity to) host results and papers</li>
+</ul>
 
 </article></slide><slide class=""><hgroup><h2>gitHub tour</h2></hgroup><article  id="github-tour">
 
@@ -3232,7 +3287,6 @@ slide:not(.current) .plotly.html-widget{
 <li><p><a href='https://www.tidyverse.org/' title=''>Tidyverse website</a> contains all the package documentation and galleries of examples</p></li>
 <li><p><a href='http://r4ds.had.co.nz/' title=''>R for Data Science</a> book covers all of the course and more</p></li>
 <li><p><a href='https://happygitwithr.com/' title=''>Happy git with R</a> for a git and Rstudio guide</p></li>
-<li><p><a href='' title=''></a></p></li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Getting info</h2></hgroup><article  id="getting-info">
@@ -3241,8 +3295,8 @@ slide:not(.current) .plotly.html-widget{
 <li><strong>inline help</strong>
 
 <ul>
-<li>on aspecific command: <code>?command</code>: returns command documentation</li>
-<li>on a broader topic: <code>?topic</code>: returns search results</li>
+<li><code>?command</code>: returns command documentation</li>
+<li><code>??topic</code>: returns search results for the topic</li>
 </ul></li>
 <li><strong>vignettes</strong>
 
@@ -3254,9 +3308,52 @@ slide:not(.current) .plotly.html-widget{
 <ul>
 <li>code Q&amp;A website. Not R-only.</li>
 <li>use sensible keywords</li>
-<li>learn ow to ask a question</li>
+<li>learn how to ask a question</li>
 </ul></li>
-</ul></article></slide>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Exercises</h2></hgroup><article  id="exercises">
+
+</article></slide><slide class=""><hgroup><h2>Rstudio exercise</h2></hgroup><article  id="rstudio-exercise">
+
+<ol>
+<li><p>investigate what does the function <code>summary</code> does</p></li>
+<li><p>look up the package info for the package <code>babynames</code></p></li>
+<li><p>not found? install the package <code>babynames</code></p></li>
+<li><p>try to <code>summary</code> <code>babynames</code></p></li>
+<li><p>import the babynames dataset to your environment</p></li>
+<li><p>explore the objects in your environment</p></li>
+</ol>
+
+<p>7 <code>View()</code> filter, arrange, reorder the dataset visually</p>
+
+</article></slide><slide class=""><hgroup><h2>gitHub workflow</h2></hgroup><article  id="github-workflow">
+
+<ol>
+<li><p>Create a project on gitHub and link it in Rstudio</p></li>
+<li><p>Edit the readme.md, commit changes</p></li>
+<li><p>Push – check on gitHub the result</p></li>
+<li><p>Create a new R script - save it on your project directory</p></li>
+<li><p>make R compute the square root of a random number between 0 and 100</p></li>
+<li><p>commit and push – check on gitHub the result</p></li>
+<li><p>change the R script to compute two such numbers</p></li>
+<li><p>commit and push – check on gitHub the result</p></li>
+<li><p>Explore gitHub to see what it offers</p></li>
+</ol>
+
+</article></slide><slide class=""><hgroup><h2>Rmarkdown exercise</h2></hgroup><article  id="rmarkdown-exercise">
+
+<ol>
+<li><p>Open your R project in Rstudio</p></li>
+<li><p>Pull from gitHub to be sure you are up to date</p></li>
+<li><p>Create a new Rmarkdown HTML document</p></li>
+<li><p>knit</p></li>
+<li><p>commit &amp; push – check on gitHub the result</p></li>
+<li><p>modify the <strong>markdown</strong> part of the .Rmd</p></li>
+<li><p>commit (do <em>not</em> push)</p></li>
+<li><p>modify at least one chunk of R code. What is the R code doing?</p></li>
+<li><p>knit, check result. Commit &amp; push.</p></li>
+</ol></article></slide>
 
 
   <slide class="backdrop"></slide>
