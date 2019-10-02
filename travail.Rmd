@@ -1,0 +1,93 @@
+---
+title: "travail"
+author: "SAMIRA"
+date: "01/10/2019"
+output: html_document
+---
+Introduction:
+
+La base de données vient de ramer_rater,elle S'appelle "ramen_ratings". Elle regroupe differentes données sur les plats de nouilles qui viennent de differntes marques et de differents pays.
+On a 3180 observations au total et 6 variables.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+ramen_ratings <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-04/ramen_ratings.csv")
+```
+
+
+```{r }
+library(tidyverse)
+library(RColorBrewer)
+library(viridis)
+library(broom)
+
+
+
+```
+
+#Visualisation des données
+```{r }
+summary(ramen_ratings)
+```
+
+
+#1#La note moyenne pour chaque pays 
+
+```{r, fig.height=15}
+ramen_ratings %>% 
+group_by(country) %>% 
+summarise(note_moyenne = mean(stars, na.rm = T),
+          note_min = min(stars, na.rm = T), 
+          note_max = max(stars, na.rm = T) )
+
+ramen_ratings %>%
+  gather(category,value, -review_number, -stars) %>%
+  count(category, value) %>%
+  group_by(category) %>%
+  top_n(15,n) %>%
+  ungroup() %>%
+  mutate(value = fct_reorder(value,n)) %>%
+  ggplot(aes(value,n)) + 
+  geom_col() + 
+  facet_wrap(~category, scales = "free_y") + 
+  coord_flip()
+
+```
+
+D'apres le résultats on a par exemple le Brésil qui a une note moyenne de 4.04 étoiles avec une note minimale de 
+3.5 étoiles et une note maximale de 5 étoiles.
+
+
+#2#calculer le nombre de 5 étoiles obtenu par les ramens made in canada
+
+```{r}
+ramen_ratings %>% 
+filter(country == "Canada" & stars == 5) %>% 
+summarise(n = n())
+```
+Il n'y a que deux ramen fabriqués au Canada qui ont obtenus cinq étoiles. 
+
+
+
+
+#3#créer un jeu de données qui contient le style et  des ramen fabriqués au Japon et au Canada qui ont eu 5 étoiles
+
+```{r}
+ramen_ratings %>% 
+  select(country, style, stars) %>% 
+filter(country == "Japan" |  country == "China")%>%
+filter(stars == 5)
+ 
+```
+On remarque que le Japon a un nombre plus élevé de ramen qui ont eu 5 étoiles . 
+
+#4#classification des ramens les mieux notées en fonctin du style
+```{r}
+ramen_ratings %>% 
+top_n(6, stars) %>% 
+  ggplot(aes(x = style, y = stars, color = "red", alpha = 0.5, size = 1)) +
+  geom_area()+
+  labs(title = "les ramens les mieux notées"  )
+  
+```
+Le plot montre que le style le mieux appécié est le pack et le moin apprécié est le bar.
